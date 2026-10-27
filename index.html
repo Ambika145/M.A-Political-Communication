@@ -194,12 +194,12 @@
     .hero-student {
       position: absolute;
       bottom: 0;
-      left: 51%;
+      left: 44%;
       transform: translateX(-50%);
-      width: clamp(430px, 39vw, 670px);
+      width: clamp(340px, 32vw, 520px);
       height: auto;
-      max-width: 46%;
-      z-index: 4;
+      max-width: 36%;
+      z-index: 1;
       pointer-events: none;
       object-fit: contain;
       object-position: bottom center;
@@ -247,9 +247,15 @@
     .hero-form-col {
       flex: 0 0 32%;
       max-width: 32%;
-      z-index: 2;
+      position: relative;
+      z-index: 5;
       display: flex;
       align-items: center;
+    }
+
+    .hero-form-col .enquire-hero-card {
+      position: relative;
+      z-index: 6;
     }
 
     /* Hero text */
@@ -3819,7 +3825,7 @@
         </div>
         <div class="info-tile">
           <span class="info-tile-value">Batch Starts:</span>
-          <span class="info-tile-value">September 2026</span>
+          <span class="info-tile-value">March 2027</span>
         </div>
         <div class="info-tile">
           <span class="info-tile-value">Fully Online</span>
