@@ -2325,18 +2325,18 @@ section {
   pointer-events: none;
   background: linear-gradient(
     110deg,
-    rgba(74, 20, 140, 0.16) 0%,
-    rgba(49, 27, 146, 0.1) 42%,
-    rgba(0, 151, 167, 0.08) 100%
+    rgba(42, 12, 90, 0.72) 0%,
+    rgba(49, 27, 146, 0.66) 42%,
+    rgba(0, 100, 120, 0.58) 100%
   );
 }
 
 .tuition-panel--eligibility .tuition-panel-overlay {
   background: linear-gradient(
     110deg,
-    rgba(26, 26, 124, 0.18) 0%,
-    rgba(74, 20, 146, 0.12) 48%,
-    rgba(0, 151, 167, 0.1) 100%
+    rgba(12, 10, 48, 0.82) 0%,
+    rgba(42, 16, 90, 0.78) 48%,
+    rgba(8, 36, 64, 0.74) 100%
   );
 }
 
