@@ -103,17 +103,16 @@
   }
 
   function initSkillsDots() {
-    var viewport = document.querySelector('.skills-carousel-viewport');
-    var track = document.getElementById('skillsCarouselTrack');
+    var track = document.getElementById('skillsTrack') || document.getElementById('skillsCarouselTrack');
     var dotsContainer = document.getElementById('skillsDots');
-    if (!viewport || !track || !dotsContainer) return;
+    if (!track || !dotsContainer) return;
 
     var slides = Array.prototype.slice.call(track.querySelectorAll('.skills-slide'));
     var dots = dotsContainer.querySelectorAll('.skills-dot');
     var currentIndex = 0;
 
     function getSlideWidth() {
-      return slides[0] ? slides[0].getBoundingClientRect().width : viewport.clientWidth;
+      return slides[0] ? slides[0].getBoundingClientRect().width : track.parentElement.clientWidth;
     }
 
     function goToSlide(index) {
@@ -128,7 +127,8 @@
 
     Array.prototype.forEach.call(dots, function (dot) {
       dot.addEventListener('click', function () {
-        goToSlide(parseInt(dot.getAttribute('data-index'), 10));
+        var raw = dot.getAttribute('data-slide') || dot.getAttribute('data-index');
+        goToSlide(parseInt(raw, 10));
       });
     });
 
